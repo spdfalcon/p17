@@ -3,7 +3,7 @@ import React from 'react'
 export default function TopBar() {
     return (
         <div>
-            <div className='w-full bg-slate-200 py-2 flex text-xs font-bold items-center justify-between'>
+            <div className='w-full bg-slate-200 py-2 flex text-xs font-bold items-center justify-between px-2'>
                 <div className='r'>
                     <ul className='flex gap-3  '>
                         <li className='hover:bg-primary-color hover:text-white px-1 py-2 rounded-md cursor-pointer duration-300'><a className='hover:text-inherit' href="">آموزش html</a></li>
