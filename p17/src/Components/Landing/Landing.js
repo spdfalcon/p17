@@ -1,11 +1,27 @@
 import React from 'react'
-
+import Typewriter from 'typewriter-effect';
 export default function Landing() {
     return (
         <div className='h-96 bg-center bg-cover' style={{ backgroundImage: `url(/images/landing.jpg)` }}>
             <div className='w-full text-white-color flex flex-col items-center py-14'>
                 <div>
-                    <h2 className='text-3xl'>ما به هر قیمتی دوره آموزشی تولید نمیکنیم</h2>
+                    <h2 className='text-3xl'>
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter
+                                .typeString('ما به هر قیمتی دوره ی آموزشی تولید نمیکنیم!')
+                                .start()
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString('سبزلرن آکادمی خصوصی برنامه نویسی')
+                                .start()
+                                .pauseFor(2000)
+                            }}
+                            options={{
+                                loop: true
+                            }}
+                        />
+                    </h2>
                 </div>
                 <div className='mt-4'>
                     <h4 className=''>با آکادمی سبزلرن برنامه نویسی رو با خیال راحت یاد بگیر و پیشرفت کن</h4>
