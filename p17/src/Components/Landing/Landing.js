@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect';
+import LandingCounter from '../LandingCounter/LandingCounter';
 export default function Landing() {
     return (
         <div className='h-96 bg-center bg-cover' style={{ backgroundImage: `url(/images/landing.jpg)` }}>
@@ -35,17 +36,17 @@ export default function Landing() {
                 <div className='flex justify-evenly w-full mt-10'>
                     <div className='flex flex-col items-center gap-1'>
                         <i className="text-6xl fa-solid fa-graduation-cap"></i>
-                        <p>31,071</p>
+                        <LandingCounter count={3171} timer={1}></LandingCounter>
                         <p>کاربر توی سبزلرن ثبت نام کردن</p>
                     </div>
                     <div className='flex flex-col items-center gap-1'>
                         <i className="text-6xl fa-solid fa-book"></i>
-                        <p>40</p>
+                        <LandingCounter count={40} timer={100}></LandingCounter>
                         <p>دوره آموزشی داریم</p>
                     </div>
                     <div className='flex flex-col items-center gap-1'>
                         <i className="text-6xl fa-regular fa-clock"></i>
-                        <p>31,320</p>
+                        <LandingCounter count={3320} timer={1}></LandingCounter>
                         <p>دقیقه آموزش تولید کردیم</p>
                     </div>
                 </div>
