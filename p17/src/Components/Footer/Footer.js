@@ -33,7 +33,7 @@ export default function Footer() {
                 </FooterItem>
             </div>
             <div className='flex justify-center'>
-            <span className='w-96 h-10 bg-primary-color inline-block -translate-y-5 -z-10 rounded-xl'></span>
+            <span className='w-96 h-10 bg-primary-color inline-block -translate-y-7 -z-10 rounded-xl'></span>
             </div>
         </div>
             <div className='w-full py-5 bg-gray-200 flex justify-center font-bold text-xs'>
