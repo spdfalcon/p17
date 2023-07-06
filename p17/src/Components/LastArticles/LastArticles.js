@@ -5,7 +5,7 @@ import ArticleBox from '../ArticleBox/ArticleBox'
 export default function LastArticles() {
     return (
         <div>
-            <div className='py-5'>
+            <div className='py-5 px-32'>
                 <SectionHeader
                     title={'جدید ترین دوره ها'}
                     desc={'پیش به سوی ارتقای دانش'}

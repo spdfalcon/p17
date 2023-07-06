@@ -4,7 +4,7 @@ import SectionHeader from '../SectionHeader/SectionHeader'
 export default function PopularCourses() {
     return (
         <div>
-            <div className='py-5'>
+            <div className='py-5 px-32'>
                 <SectionHeader
                     title={'محبوبترین دوره ها'}
                     desc={'دوره های محبوب بر اساس امتیاز کاربران'}

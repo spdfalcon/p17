@@ -3,7 +3,7 @@ import React from 'react'
 export default function SectionHeader({title , desc , btnTitle , bgw}) {
     return (
         <div>
-            <div className='w-full flex justify-between px-32 gap-5 items-center'>
+            <div className='w-full flex justify-between gap-5 items-center'>
                 <div className='r relative w-full'>
                     <div className={`up relative bg-primary-color/25 h-4  ${bgw}`}>
                         <h2 className='absolute -top-2'>{title}</h2>

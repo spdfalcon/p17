@@ -9,6 +9,7 @@ export default function LastCoourses() {
 
   return (
     <div className='mt-5'>
+      <div className='px-32'>
       <SectionHeader
         title={'جدید ترین دوره ها'}
         desc={'سکوی پرتاب شما به سمت موفقیت'}
@@ -16,6 +17,7 @@ export default function LastCoourses() {
         bgw={'w-40'}
         >
       </SectionHeader>
+      </div>
       <div className='mt-10 w-full px-20 text-xs grid grid-cols-3 gap-32 font-bold py-10'>
         <CoursBox></CoursBox>
         <CoursBox></CoursBox>
