@@ -5,6 +5,12 @@ import Footer from '../../Components/Footer/Footer'
 import BreadCrumb from '../../Components/BreadCrumb/BreadCrumb'
 import CourseDetailBox from '../../Components/CourseDetailBox/CourseDetailBox'
 import SectionHeader from '../../Components/SectionHeader/SectionHeader'
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { TbRosetteNumber1 } from 'react-icons/tb'
 export default function CourseInfo() {
   return (
     <div>
@@ -126,6 +132,105 @@ export default function CourseInfo() {
                 <div>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo pariatur eligendi ullam voluptates necessitatibus veritatis doloribus, mollitia, ex rem cumque nesciunt ad aut minus natus quia aperiam quis earum velit a at atque, exercitationem maxime incidunt? Omnis ad laudantium harum autem voluptatem? Nulla similique nobis provident quos quae rem, nemo quasi inventore laudantium molestias quam temporibus dolorem magni! Labore reiciendis omnis sapiente earum! Corrupti in error unde perspiciatis, voluptas consectetur minima nam iste? Eveniet architecto minima molestiae perferendis facere, laborum at atque cumque repudiandae voluptates harum obcaecati eaque aliquam officia quas. Laudantium cumque porro autem culpa quam maiores sequi aperiam!</p>
                 </div>
+                <div className='flex gap-3 text-xs font-bold'>
+                  <div className='border-2 border-primary-color h-8 p-2 flex justify-center items-center rounded-md text-primary-color cursor-pointer hover:text-white-color hover:bg-primary-color duration-300'>
+                    <a className='' href="#">دانلود همگانی ویدیوو ها</a>
+                  </div>
+                  <div className='border-2 border-primary-color h-8 p-2 flex justify-center items-center rounded-md text-primary-color cursor-pointer hover:text-white-color hover:bg-primary-color duration-300'>
+                    <a className='' href="#">دانلود همگانی پیوست ها</a>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                      >
+                        <Typography><h4 className='text-blue-800 font-bold'>معرفی دوره</h4></Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography>
+                          <div className='flex justify-between'>
+                            <div className='r flex font-bold gap-3'>
+                              <div className='text-gray-600 text-2xl'>
+                                <TbRosetteNumber1></TbRosetteNumber1>
+                              </div>
+                              <div>
+                                <i class="fa-brands fa-youtube"></i>
+                              </div>
+                              <div>
+                                <h3>معرفی دوره + چرا یادگیری کتابخانه ها ضروری است؟</h3>
+                              </div>
+                            </div>
+                            <div className='l'>
+                              <h4>18:34</h4>
+                            </div>
+                          </div>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                      >
+                        <Typography><h4 className='text-blue-800 font-bold'>معرفی دوره</h4></Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography>
+                          <div className='flex justify-between'>
+                            <div className='r flex font-bold gap-3'>
+                              <div className='text-gray-600 text-2xl'>
+                                <TbRosetteNumber1></TbRosetteNumber1>
+                              </div>
+                              <div>
+                                <i class="fa-brands fa-youtube"></i>
+                              </div>
+                              <div>
+                                <h3>معرفی دوره + چرا یادگیری کتابخانه ها ضروری است؟</h3>
+                              </div>
+                            </div>
+                            <div className='l'>
+                              <h4>18:34</h4>
+                            </div>
+                          </div>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel3a-content"
+                        id="panel3a-header"
+                      >
+                        <Typography><h4 className='text-blue-800 font-bold'>معرفی دوره</h4></Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography>
+                          <div className='flex justify-between'>
+                            <div className='r flex font-bold gap-3'>
+                              <div className='text-gray-600 text-2xl'>
+                                <TbRosetteNumber1></TbRosetteNumber1>
+                              </div>
+                              <div>
+                                <i class="fa-brands fa-youtube"></i>
+                              </div>
+                              <div>
+                                <h3>معرفی دوره + چرا یادگیری کتابخانه ها ضروری است؟</h3>
+                              </div>
+                            </div>
+                            <div className='l'>
+                              <h4>18:34</h4>
+                            </div>
+                          </div>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  </div>
+                </div>
               </div>
 
             </div>
@@ -138,7 +243,7 @@ export default function CourseInfo() {
 
 
             <div className='l col-span-4 relative'>
-              <div className='sticky top-0'>
+              <div className='sticky top-0 p-5'>
                 <div className='bg-primary-color '>
                   m
                 </div>
