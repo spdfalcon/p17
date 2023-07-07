@@ -231,6 +231,28 @@ export default function CourseInfo() {
                     </Accordion>
                   </div>
                 </div>
+                <div className='mt-5 '>
+                  <div className='flex items-center justify-between'>
+                    <div className='r flex gap-3 items-center'>
+                      <div className='w-14 rounded-full overflow-hidden'>
+                        <img src="/images/saeedi.png" alt="teacher" />
+                      </div>
+                      <div className='text-xs font-bold'>
+                        <h2>محمد امین سعیدی راد</h2>
+                        <h4>frontend developer</h4>
+                      </div>
+                    </div>
+                    <div className='l'>
+                      <div className='flex items-center gap-2 bg-primary-color text-sm font-bold px-2 py-1 rounded-md text-white-color cursor-pointer'>
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h4>مدرس</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='b'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fuga, ea nisi aperiam facere sunt cumque architecto! Tempora, nisi eligendi?</p>''
+                  </div>
+                </div>
               </div>
 
             </div>
@@ -243,10 +265,82 @@ export default function CourseInfo() {
 
 
             <div className='l col-span-4 relative'>
-              <div className='sticky top-0 p-5'>
-                <div className='bg-primary-color '>
-                  m
+              <div className='sticky top-0 p-5 flex flex-col gap-7'>
+                <div className='p-2 shadow-lg'>
+                  <div className='bg-primary-color flex justify-center py-2 rounded-md gap-3 items-center text-white-color'>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h4 className='text-sm'>دانشجوی دوره هستید</h4>
+                  </div>
                 </div>
+
+
+
+                <div className='shadow-lg p-2 '>
+                  <div className=' flex justify-center text-sm items-center py-2 font-bold gap-3 border rounded-md'>
+                    <div><i class="fa-solid fa-user-graduate"></i></div>
+                    <div><h4>تعداد دانشجو : </h4></div>
+                    <div className='bg-gray-400 px-2 py-1 rounded-md text-white-color'><span>178</span></div>
+                  </div>
+                  <div className=' flex justify-center gap-3 text-xs font-bold py-3 items-center mt-2'>
+                    <div className='r flex items-center gap-1'>
+                      <div><i class="fa-regular fa-comments"></i></div>
+                      <div><h4>64</h4></div>
+                      <div><h4>دیدگاه</h4></div>
+                    </div>
+                    <div className='mid text-gray-400'><h4>|</h4></div>
+                    <div className='l flex items-center gap-1'>
+                      <div><i class="fa-solid fa-eye"></i></div>
+                      <div>14,234</div>
+                      <div>بازدید</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='shadow-lg p-3'>
+                  <div className='t flex gap-1 text-xs font-bold'>
+                    <div><i class="fa-solid fa-link"></i></div>
+                    <div><h4>لینک کوتاه</h4></div>
+                  </div>
+                  <div className='b border p-1'><input className='focus:outline-none' placeholder='www.mohammad70.ir' type="text" /></div>
+                </div>
+
+                <div className='shadow-lg p-3 text-xs'>
+                  <div className='font-bold'>
+                    <h2>سرفصل های دوره</h2>
+                  </div>
+                  <div>
+                    <h4>برای مشاهده و دانلود دوره روی کلمه ی <a className='text-blue-800 border-b-blue-800 border-b py-px' href="#">لینک</a> کلیک کنید</h4>
+                  </div>
+                </div>
+
+                <div className='shadow-lg p-3 text-xs flex flex-col gap-4'>
+                  <div className='font-bold'><h2>دوره های مرتبط</h2></div>
+                  <div className='flex gap-1 items-center'>
+                    <div className='r w-14 rounded-md overflow-hidden'>
+                      <img src="/images/courses/js_project.png" />
+                    </div>
+                    <div className='l'><h4>پروژه های تخصصی با جاوا اسکریپت</h4></div>
+                  </div>
+                  <div className='flex gap-1 items-center'>
+                    <div className='r w-14 rounded-md overflow-hidden'>
+                      <img src="/images/courses/fareelancer.png" />
+                    </div>
+                    <div className='l'><h4>تعیین قیمت پروژه های فری لنسری</h4></div>
+                  </div>
+                  <div className='flex gap-1 items-center'>
+                    <div className='r w-14 rounded-md overflow-hidden'>
+                      <img src="/images/courses/nodejs.png" />
+                    </div>
+                    <div className='l'><h4>دوره ی Api نویسی</h4></div>
+                  </div>
+                  <div className='flex gap-1 items-center'>
+                    <div className='r w-14 rounded-md overflow-hidden'>
+                      <img src="/images/courses/jango.png" />
+                    </div>
+                    <div className='l'><h4>متخصص جنگو</h4></div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
