@@ -62,6 +62,7 @@ export default function CourseInfo() {
 
         <div>
           <div className='px-32 grid grid-cols-12 gap-3 mt-5'>
+            {/* start about */}
             <div className='r grid col-span-8 grid-cols-3 gap-3 shadow-lg'>
               <CourseDetailBox
                 icon={'fa-solid fa-graduation-cap'}
@@ -256,6 +257,7 @@ export default function CourseInfo() {
               </div>
 
             </div>
+            {/* end about */}
 
 
 
@@ -263,7 +265,7 @@ export default function CourseInfo() {
 
 
 
-
+            {/* start sidbar */}
             <div className='l col-span-4 relative'>
               <div className='sticky top-0 p-5 flex flex-col gap-7'>
                 <div className='p-2 shadow-lg'>
@@ -343,6 +345,7 @@ export default function CourseInfo() {
 
               </div>
             </div>
+            {/* end sidbar */}
           </div>
         </div>
         <Footer></Footer>
