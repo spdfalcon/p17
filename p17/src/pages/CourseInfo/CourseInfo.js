@@ -11,6 +11,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TbRosetteNumber1 } from 'react-icons/tb'
+import CommentTextArea from '../../Components/CommentTextArea/CommentTextArea'
 export default function CourseInfo() {
   return (
     <div>
@@ -253,6 +254,9 @@ export default function CourseInfo() {
                   <div className='b'>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fuga, ea nisi aperiam facere sunt cumque architecto! Tempora, nisi eligendi?</p>''
                   </div>
+                </div>
+                <div>
+                <CommentTextArea></CommentTextArea>
                 </div>
               </div>
 
