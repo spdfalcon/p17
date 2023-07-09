@@ -1,6 +1,6 @@
 import React from 'react'
-
-export default function SectionHeader({title , desc , btnTitle , bgw}) {
+import {Link} from 'react-router-dom'
+export default function SectionHeader({title , desc , btnTitle , bgw , btnHref}) {
     return (
         <div>
             <div className='w-full flex justify-between gap-5 items-center'>
@@ -18,9 +18,9 @@ export default function SectionHeader({title , desc , btnTitle , bgw}) {
                     btnTitle ? (
                 <div className='l w-32'>
                     <button className='text-xs bg-primary-color p-2 rounded-md text-white-color'>
-                        <a className='flex gap-1 items-center' href="#">{btnTitle}
+                        <Link className='flex gap-1 items-center' to={btnHref}>{btnTitle}
                         <i class="fa-solid fa-arrow-left"></i>
-                        </a>
+                        </Link>
                     </button>
                 </div>
                     ) : null

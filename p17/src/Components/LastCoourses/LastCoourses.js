@@ -15,6 +15,7 @@ export default function LastCoourses() {
         desc={'سکوی پرتاب شما به سمت موفقیت'}
         btnTitle={'تمام دوره ها'}
         bgw={'w-40'}
+        btnHref={'/courses'}
         >
       </SectionHeader>
       </div>
