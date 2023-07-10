@@ -1,11 +1,24 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import LoadingBox from '../LoadingBox/LoadingBox'
 export default function CoursBox() {
+    const [isImgShow , setIsImgShow ] = useState(false)
+    const onImageLoaded = ()=>{
+        setIsImgShow(true)
+    }
     return (
-        <div className=''>
+        
+        <>
             <div className='shadow-lg rounded-lg overflow-hidden  hover:-translate-y-3 duration-300'>
-                <div className='up '>
-                    <img src="/images/courses/fareelancer.png" />
+            {
+                !isImgShow && (
+                    <LoadingBox></LoadingBox>
+                )
+            }
+                <div className='up'>
+                    <img 
+                    src="/images/courses/fareelancer.png"
+                    onLoad={onImageLoaded}
+                    />
                 </div>
                 <div className='mid p-2 flex flex-col gap-3 border-b-2'>
                     <div className=''>
@@ -40,6 +53,6 @@ export default function CoursBox() {
                     </button>
                 </div>
             </div>
-        </div>
+        </>
     )
 }

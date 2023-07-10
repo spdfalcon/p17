@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
+import LoadingBox from '../LoadingBox/LoadingBox'
 
 export default function ArticleBox({title , desc , cover}) {
+    const [isImgShow , setIsImgShow] = useState(false)
+    const onImgLoad = ()=>{
+        setIsImgShow(true)
+    }
     return (
         <div>
             <div className='shadow-lg p-5 text-xs flex flex-col gap-3 hover:-translate-y-3 duration-300'>
+                {
+                    !isImgShow && (
+                        <LoadingBox></LoadingBox>
+                    )
+                }
                 <div className='up'>
-                    <img src={cover} alt="" />
+                    <img
+                    onLoad={onImgLoad}
+                    src={cover} alt="" />
                 </div>
                 <div className='mid'>
                     <h3 className='font-bold'>{title}</h3>
