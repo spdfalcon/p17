@@ -58,6 +58,7 @@ export default function Register() {
                 <Button
                   onclick={''}
                   className={''}
+                  disabled={true}
                 >عضویت</Button>
               </div>
             </div>

@@ -50,6 +50,7 @@ export default function Login() {
                                 <Button
                                     onclick={''}
                                     className={''}
+                                    disabled={true}
                                 >ورود</Button>
                             </div>
                         </div>
