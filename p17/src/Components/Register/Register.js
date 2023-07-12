@@ -3,6 +3,8 @@ import TopBar from '../TopBar/TopBar'
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
+import Input from '../Form/Input'
+import Button from '../Form/Button'
 export default function Register() {
   return (
     <div>
@@ -22,15 +24,30 @@ export default function Register() {
               <Link className='bg-gray-500 px-2 py-1 text-white-color rounded-md' to="/login">وارد شوید</Link>
             </div>
             <div className='border px-2 py-2 text-xs flex justify-between'>
-              <input className=' w-full outline-none' placeholder='نام کاربری' type="text" />
+              <Input
+                className=' w-full outline-none'
+                type='text'
+                placeholder='نام کاربری'
+                element='input'
+              ></Input>
               <i className="text-gray-400 fa-regular fa-star"></i>
             </div>
             <div className='border px-2 py-2 text-xs flex justify-between'>
-              <input className='w-full  outline-none' placeholder='آدرس ایمیل' type="text" />
+              <Input
+                className=' w-full outline-none'
+                type='text'
+                placeholder='آدرس ایمیل'
+                element='input'
+              ></Input>
               <i className="text-gray-400 fa-regular fa-star"></i>
             </div>
             <div className='border px-2 py-2 text-xs flex justify-between'>
-              <input className='w-full  outline-none' placeholder='رمز عبور' type="text" />
+              <Input
+                className=' w-full outline-none'
+                type='password'
+                placeholder='رمز عبور'
+                element='input'
+              ></Input>
               <i className="text-gray-400 fa-regular fa-star"></i>
             </div>
             <div className='flex bg-primary-color items-center text-white p-2'>
@@ -38,7 +55,10 @@ export default function Register() {
                 <i className="fa-regular fa-star"></i>
               </div>
               <div className='flex-1 text-center cursor-pointer'>
-                <button className=''>عضویت</button>
+                <Button
+                  onclick={''}
+                  className={''}
+                >عضویت</Button>
               </div>
             </div>
             <div className='text-xs flex flex-col gap-2'>

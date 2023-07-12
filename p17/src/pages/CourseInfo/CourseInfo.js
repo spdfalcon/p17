@@ -98,7 +98,7 @@ export default function CourseInfo() {
               <div className='col-span-3 py-3 bg-gray-200 rounded-md shadow-lg px-3'>
                 <div className='flex items-center gap-3 '>
                   <div>
-                    <i class="fa-solid fa-chart-line"></i>
+                    <i className="fa-solid fa-chart-line"></i>
                   </div>
                   <div>
                     <h4 className='text-xs font-bold'>درصد پیشرفت دوره: 80%</h4>
@@ -160,7 +160,7 @@ export default function CourseInfo() {
                                 <TbRosetteNumber1></TbRosetteNumber1>
                               </div>
                               <div>
-                                <i class="fa-brands fa-youtube"></i>
+                                <i className="fa-brands fa-youtube"></i>
                               </div>
                               <div>
                                 <h3>معرفی دوره + چرا یادگیری کتابخانه ها ضروری است؟</h3>
@@ -189,7 +189,7 @@ export default function CourseInfo() {
                                 <TbRosetteNumber1></TbRosetteNumber1>
                               </div>
                               <div>
-                                <i class="fa-brands fa-youtube"></i>
+                                <i className="fa-brands fa-youtube"></i>
                               </div>
                               <div>
                                 <h3>معرفی دوره + چرا یادگیری کتابخانه ها ضروری است؟</h3>
@@ -218,7 +218,7 @@ export default function CourseInfo() {
                                 <TbRosetteNumber1></TbRosetteNumber1>
                               </div>
                               <div>
-                                <i class="fa-brands fa-youtube"></i>
+                                <i className="fa-brands fa-youtube"></i>
                               </div>
                               <div>
                                 <h3>معرفی دوره + چرا یادگیری کتابخانه ها ضروری است؟</h3>
@@ -246,7 +246,7 @@ export default function CourseInfo() {
                     </div>
                     <div className='l'>
                       <div className='flex items-center gap-2 bg-primary-color text-sm font-bold px-2 py-1 rounded-md text-white-color cursor-pointer'>
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i className="fa-solid fa-chalkboard-user"></i>
                         <h4>مدرس</h4>
                       </div>
                     </div>
@@ -274,7 +274,7 @@ export default function CourseInfo() {
               <div className='sticky top-0 p-5 flex flex-col gap-7'>
                 <div className='p-2 shadow-lg'>
                   <div className='bg-primary-color flex justify-center py-2 rounded-md gap-3 items-center text-white-color'>
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i className="fa-solid fa-graduation-cap"></i>
                     <h4 className='text-sm'>دانشجوی دوره هستید</h4>
                   </div>
                 </div>
@@ -283,19 +283,19 @@ export default function CourseInfo() {
 
                 <div className='shadow-lg p-2 '>
                   <div className=' flex justify-center text-sm items-center py-2 font-bold gap-3 border rounded-md'>
-                    <div><i class="fa-solid fa-user-graduate"></i></div>
+                    <div><i className="fa-solid fa-user-graduate"></i></div>
                     <div><h4>تعداد دانشجو : </h4></div>
                     <div className='bg-gray-400 px-2 py-1 rounded-md text-white-color'><span>178</span></div>
                   </div>
                   <div className=' flex justify-center gap-3 text-xs font-bold py-3 items-center mt-2'>
                     <div className='r flex items-center gap-1'>
-                      <div><i class="fa-regular fa-comments"></i></div>
+                      <div><i className="fa-regular fa-comments"></i></div>
                       <div><h4>64</h4></div>
                       <div><h4>دیدگاه</h4></div>
                     </div>
                     <div className='mid text-gray-400'><h4>|</h4></div>
                     <div className='l flex items-center gap-1'>
-                      <div><i class="fa-solid fa-eye"></i></div>
+                      <div><i className="fa-solid fa-eye"></i></div>
                       <div>14,234</div>
                       <div>بازدید</div>
                     </div>
@@ -304,7 +304,7 @@ export default function CourseInfo() {
 
                 <div className='shadow-lg p-3'>
                   <div className='t flex gap-1 text-xs font-bold'>
-                    <div><i class="fa-solid fa-link"></i></div>
+                    <div><i className="fa-solid fa-link"></i></div>
                     <div><h4>لینک کوتاه</h4></div>
                   </div>
                   <div className='b border p-1'><input className='focus:outline-none' placeholder='www.mohammad70.ir' type="text" /></div>

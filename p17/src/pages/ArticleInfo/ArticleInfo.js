@@ -37,7 +37,7 @@ export default function ArticleInfo() {
               <div className='text-xs mt-2 font-bold flex gap-4'>
                 <div className='flex gap-1'>
                   <div>
-                    <i class="fa-regular fa-folder"></i>
+                    <i className="fa-regular fa-folder"></i>
                   </div>
                   <div>
                     <h4 className=''>جاوا اسکریپت</h4>
@@ -45,7 +45,7 @@ export default function ArticleInfo() {
                 </div>
                 <div className='flex gap-1'>
                   <div>
-                    <i class="fa-regular fa-user"></i>
+                    <i className="fa-regular fa-user"></i>
                   </div>
                   <div>
                     <h4 className=''>ارسال شده توسط قدیر</h4>
@@ -53,7 +53,7 @@ export default function ArticleInfo() {
                 </div>
                 <div className='flex gap-1'>
                   <div>
-                    <i class="fa-regular fa-clock"></i>
+                    <i className="fa-regular fa-clock"></i>
                   </div>
                   <div>
                     <h4 className=''>ارسال شده توسط قدیر</h4>
@@ -61,7 +61,7 @@ export default function ArticleInfo() {
                 </div>
                 <div className='flex gap-1'>
                   <div>
-                    <i class="fa-regular fa-eye"></i>
+                    <i className="fa-regular fa-eye"></i>
                   </div>
                   <div>
                     <h4 className=''>2,14k بازدید</h4>
@@ -76,19 +76,19 @@ export default function ArticleInfo() {
               <div className='flex gap-5'>
                 <div className='flex text-xs'>
                   <div className='text-orange-500'>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                   </div>
                   <div className='text-orange-500'>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                   </div>
                   <div className='text-orange-500'>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                   </div>
                   <div className='text-orange-500'>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                   </div>
                   <div className='text-orange-500'>
-                    <i class="fa-regular fa-star"></i>
+                    <i className="fa-regular fa-star"></i>
                   </div>
                 </div>
                 <div className='text-xs font-bold'>
@@ -121,9 +121,9 @@ export default function ArticleInfo() {
             <div className='flex justify-center'><img src="/images/blog/4.png" alt="" /></div>
             <div className='flex gap-2'>
               <div><h4>اشتراک گذاری:</h4></div>
-              <div><i class="fa-brands fa-telegram"></i></div>
-              <div><i class="fa-brands fa-twitter"></i></div>
-              <div><i class="fa-brands fa-facebook"></i></div>
+              <div><i className="fa-brands fa-telegram"></i></div>
+              <div><i className="fa-brands fa-twitter"></i></div>
+              <div><i className="fa-brands fa-facebook"></i></div>
             </div>
             {/* start call to action */}
             <div className='shadow-lg p-3 bg-gray-200 mt-5'>
@@ -137,7 +137,7 @@ export default function ArticleInfo() {
               </div>
               <div className='flex text-xs font-bold justify-between mt-2'>
                 <div>
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i className="fa-solid fa-arrow-right"></i>
                 </div>
                 <div className='w-60 text-center'>
                   <a href='#'>سریع ترین و بهترین راه یادگیری جاوا اسکریپت چیست؟ تجربه برنامه نویسان</a>
@@ -146,7 +146,7 @@ export default function ArticleInfo() {
                   <a href='#'>سریع ترین و بهترین راه یادگیری جاوا اسکریپت چیست؟ تجربه برنامه نویسان</a>
                 </div>
                 <div>
-                  <i class="fa-solid fa-arrow-left"></i>
+                  <i className="fa-solid fa-arrow-left"></i>
                 </div>
               </div>
             </div>
@@ -201,23 +201,23 @@ export default function ArticleInfo() {
                 <span className='w-10 h-10 absolute bg-primary-color rounded-lg top-2 -right-6 rotate-12'></span>
                 <div className='font-bold'><h2>دسترسی سریع</h2></div>
                 <div className='flex gap-1 border-b-2 py-1'>
-                  <div><i class="fa-solid fa-chevron-left"></i></div>
+                  <div><i className="fa-solid fa-chevron-left"></i></div>
                   <div><a href="#">صفحه اصلی</a></div>
                 </div>
                 <div className='flex gap-1 border-b-2 py-1'>
-                  <div><i class="fa-solid fa-chevron-left"></i></div>
+                  <div><i className="fa-solid fa-chevron-left"></i></div>
                   <div><a href="#">فرانت اند</a></div>
                 </div>
                 <div className='flex gap-1 border-b-2 py-1'>
-                  <div><i class="fa-solid fa-chevron-left"></i></div>
+                  <div><i className="fa-solid fa-chevron-left"></i></div>
                   <div><a href="#">امنیت</a></div>
                 </div>
                 <div className='flex gap-1 border-b-2 py-1'>
-                  <div><i class="fa-solid fa-chevron-left"></i></div>
+                  <div><i className="fa-solid fa-chevron-left"></i></div>
                   <div><a href="#">پایتون</a></div>
                 </div>
                 <div className='flex gap-1 border-b-2 py-1'>
-                  <div><i class="fa-solid fa-chevron-left"></i></div>
+                  <div><i className="fa-solid fa-chevron-left"></i></div>
                   <div><a href="#">مهارت های نرم</a></div>
                 </div>
               </div>

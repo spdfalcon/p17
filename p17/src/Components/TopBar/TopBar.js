@@ -18,7 +18,7 @@ export default function TopBar() {
                 <div className='l px-2 flex gap-2'>
                     <div className='flex items-center gap-2'>
                         <a href='#'>spd.mohammadreza@gmail.com</a>
-                        <i class="text-primary-color fa-solid fa-envelope text-base"></i>
+                        <i className="text-primary-color fa-solid fa-envelope text-base"></i>
                     </div>
                     <div className='flex items-center gap-2'>
                         <a href='#' className=''>09029974092</a>

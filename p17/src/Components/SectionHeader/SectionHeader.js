@@ -19,7 +19,7 @@ export default function SectionHeader({title , desc , btnTitle , bgw , btnHref})
                 <div className='l w-32'>
                     <button className='text-xs bg-primary-color p-2 rounded-md text-white-color'>
                         <Link className='flex gap-1 items-center' to={btnHref}>{btnTitle}
-                        <i class="fa-solid fa-arrow-left"></i>
+                        <i className="fa-solid fa-arrow-left"></i>
                         </Link>
                     </button>
                 </div>
