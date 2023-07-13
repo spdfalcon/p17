@@ -1,12 +1,14 @@
-import React, { useReducer } from 'react'
-
+import React, { useEffect, useReducer, useState } from 'react'
+import validator from '../../Validators/Validator';
+import { useForm } from '../../hooks/useForm';
 export default function Input(props) {
+    console.log(props.validations);
     const inputReducer = (state , action)=>{
         switch(action.type){
             case 'CHANGE': {
                 return {
                     value:action.value,
-                    isValid: true
+                    isValid: validator(action.value , action.validations)
                 }
             }
             default: {
@@ -19,11 +21,20 @@ export default function Input(props) {
         value : '',
         isValid: false,
     })
+
+    const {value , isValid} = mainInput
+    const {id, onInputHandler} = props
+
+    useEffect(()=>{
+        onInputHandler(id , value,isValid)
+    },[value])
     const onchangeHandler = (event)=>{
         console.log(event.target.value);
         dispatch({
             type:'CHANGE',
-            value:event.target.value
+            value:event.target.value,
+            validations:props.validations,
+            isValid:true
         })
     }
     const element = props.element === 'input' ? (

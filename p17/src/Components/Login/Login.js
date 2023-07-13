@@ -6,7 +6,20 @@ import { Link } from 'react-router-dom'
 import Counter from '../Counter/Counter'
 import Input from '../Form/Input'
 import Button from '../Form/Button'
+import { useForm } from '../../hooks/useForm'
+import { requiredValidator, minValidator, maxValidator, emailValidator } from '../../Validators/rules'
 export default function Login() {
+    const [formState, onInputHandler] = useForm({
+        username: {
+            value: '',
+            isValid: false,
+        },
+        password: {
+            value: '',
+            isValid: false,
+        },
+
+    }, false)
     return (
         <div>
             <TopBar></TopBar>
@@ -28,8 +41,15 @@ export default function Login() {
                             <Input
                                 className=' w-full outline-none'
                                 type='text'
+                                id='username'
                                 placeholder='نام کاربری یا آدرس ایمیل'
                                 element='input'
+                                validations={[
+                                    requiredValidator(),
+                                    minValidator(8),
+                                    maxValidator(20)
+                                ]}
+                                onInputHandler={onInputHandler}
                             ></Input>
                             <i className="text-gray-400 fa-regular fa-star"></i>
                         </div>
@@ -39,6 +59,13 @@ export default function Login() {
                                 type='password'
                                 placeholder='کلمه ی عبور'
                                 element='input'
+                                id='password'
+                                validations={[
+                                    requiredValidator(),
+                                    minValidator(8),
+                                    maxValidator(18)
+                                ]}
+                                onInputHandler={onInputHandler}
                             ></Input>
                             <i className="text-gray-400 fa-regular fa-star"></i>
                         </div>
@@ -49,8 +76,8 @@ export default function Login() {
                             <div className='flex-1 text-center cursor-pointer'>
                                 <Button
                                     onclick={''}
-                                    className={''}
-                                    disabled={true}
+                                    className={`${formState.isFormValid ? 'text-white-color' : 'text-red-800'}`}
+                                    disabled={!formState.isFormValid}
                                 >ورود</Button>
                             </div>
                         </div>
