@@ -47,7 +47,8 @@ export default function Login() {
                                 validations={[
                                     requiredValidator(),
                                     minValidator(8),
-                                    maxValidator(20)
+                                    maxValidator(30),
+                                    emailValidator()
                                 ]}
                                 onInputHandler={onInputHandler}
                             ></Input>
@@ -69,14 +70,14 @@ export default function Login() {
                             ></Input>
                             <i className="text-gray-400 fa-regular fa-star"></i>
                         </div>
-                        <div className='flex bg-primary-color items-center text-white p-2'>
+                        <div className={`flex ${formState.isFormValid ? 'bg-primary-color' : 'bg-red-800'} items-center  p-2`}>
                             <div className=''>
                                 <i className="fa-regular fa-star"></i>
                             </div>
                             <div className='flex-1 text-center cursor-pointer'>
                                 <Button
                                     onclick={''}
-                                    className={`${formState.isFormValid ? 'text-white-color' : 'text-red-800'}`}
+                                    className={``}
                                     disabled={!formState.isFormValid}
                                 >ورود</Button>
                             </div>
