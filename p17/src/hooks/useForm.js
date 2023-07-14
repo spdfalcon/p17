@@ -1,51 +1,51 @@
-import { useReducer } from "react"
+import { useCallback, useReducer } from "react"
 
-const formReducer = (state , action)=>{
-    switch(action.type){
+const formReducer = (state, action) => {
+    switch (action.type) {
         case 'INPUT_CHANGE': {
             let isFormValid = true
-            for(const inputID in state.inputs){
-                if(inputID === action.inputID){
+            for (const inputID in state.inputs) {
+                if (inputID === action.inputID) {
                     isFormValid = isFormValid && action.isValid
-                }else{
+                } else {
                     isFormValid = isFormValid && state.inputs[inputID].isValid
                 }
             }
             return {
-                ...state , 
-                inputs:{
+                ...state,
+                inputs: {
                     ...state.inputs,
-                    [action.inputID]:{
-                        value:action.value,
-                        isValid:action.isValid
+                    [action.inputID]: {
+                        value: action.value,
+                        isValid: action.isValid
                     }
                 },
-                isFormValid:isFormValid
+                isFormValid: isFormValid
             }
         }
-default: {
-    return state
-}
+        default: {
+            return state
+        }
     }
 }
 
 
 
 export const useForm = (initInput, initFormsValid) => {
-    const [formState , dispatch] = useReducer(formReducer,{
+    const [formState, dispatch] = useReducer(formReducer, {
         inputs: initInput,
-        isFormValid : initFormsValid
+        isFormValid: initFormsValid
 
     })
 
-    const onInputHandler = (id ,value, isValid)=>{
+    const onInputHandler = useCallback((id, value, isValid) => {
         dispatch({
-            type:'INPUT_CHANGE',
+            type: 'INPUT_CHANGE',
             value,
             isValid,
-            inputID:id
+            inputID: id
         })
-    }
+    },[])
 
     return [formState, onInputHandler]
 }

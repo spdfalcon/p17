@@ -1,11 +1,54 @@
-import React from 'react'
+import React,  {useContext} from 'react'
 import TopBar from '../TopBar/TopBar'
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
 import Input from '../Form/Input'
 import Button from '../Form/Button'
+import AuthContext from '../../context/authContext'
+import { requiredValidator, maxValidator, minValidator, emailValidator } from '../../Validators/rules'
+import { useForm } from '../../hooks/useForm'
 export default function Register() {
+  const authContext = useContext(AuthContext)
+  const registerNewUser = (event) => {
+    const newUserInfo = {
+      name:formState.inputs.name.value,
+      username:formState.inputs.username.value,
+      email:formState.inputs.email.value,
+      password:formState.inputs.password.value,
+      confirmPassword:formState.inputs.password.value,
+      phone:9029974092,
+    }
+    fetch(`http://localhost:4000/v1/auth/register`, {
+      method:'POST',
+      headers:{
+        'content-type':'application/json',
+      },
+      body:JSON.stringify(newUserInfo)
+    })
+    .then(res=>res.json())
+    .then(result => {
+      authContext.login(result.user ,result.accessToken)
+    })
+  }
+  const [formState, onInputHandler] = useForm({
+    name: {
+      value: '',
+      isValid: false
+    },
+    username: {
+      value: '',
+      isValid: false
+    },
+    email: {
+      value: '',
+      isValid: false
+    },
+    password: {
+      value: '',
+      isValid: false
+    },
+  }, false)
   return (
     <div>
       <TopBar></TopBar>
@@ -27,8 +70,31 @@ export default function Register() {
               <Input
                 className=' w-full outline-none'
                 type='text'
+                placeholder='نام و نام خانوادگی'
+                element='input'
+                id={'name'}
+                onInputHandler={onInputHandler}
+                validations={[
+                  requiredValidator(),
+                  minValidator(8),
+                  maxValidator(20)
+                ]}
+              ></Input>
+              <i className="text-gray-400 fa-regular fa-star"></i>
+            </div>
+            <div className='border px-2 py-2 text-xs flex justify-between'>
+              <Input
+                className=' w-full outline-none'
+                type='text'
                 placeholder='نام کاربری'
                 element='input'
+                id={'username'}
+                onInputHandler={onInputHandler}
+                validations={[
+                  requiredValidator(),
+                  minValidator(8),
+                  maxValidator(20)
+                ]}
               ></Input>
               <i className="text-gray-400 fa-regular fa-star"></i>
             </div>
@@ -38,6 +104,14 @@ export default function Register() {
                 type='text'
                 placeholder='آدرس ایمیل'
                 element='input'
+                id={'email'}
+                onInputHandler={onInputHandler}
+                validations={[
+                  requiredValidator(),
+                  minValidator(8),
+                  maxValidator(20),
+                  emailValidator()
+                ]}
               ></Input>
               <i className="text-gray-400 fa-regular fa-star"></i>
             </div>
@@ -47,18 +121,25 @@ export default function Register() {
                 type='password'
                 placeholder='رمز عبور'
                 element='input'
+                id={'password'}
+                onInputHandler={onInputHandler}
+                validations={[
+                  requiredValidator(),
+                  minValidator(8),
+                  maxValidator(20)
+                ]}
               ></Input>
               <i className="text-gray-400 fa-regular fa-star"></i>
             </div>
-            <div className='flex bg-primary-color items-center text-white p-2'>
+            <div className={`flex items-center text-white p-2 ${formState.isFormValid ? 'bg-primary-color' : 'bg-red-800'}`}>
               <div className=''>
                 <i className="fa-regular fa-star"></i>
               </div>
               <div className='flex-1 text-center cursor-pointer'>
                 <Button
-                  onclick={''}
+                  onClick={registerNewUser}
                   className={''}
-                  disabled={true}
+                  disabled={!formState.isFormValid}
                 >عضویت</Button>
               </div>
             </div>

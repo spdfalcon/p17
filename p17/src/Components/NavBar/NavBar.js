@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import AuthContext from '../../context/authContext'
+import { Link } from 'react-router-dom';
 export default function NavBar() {
+  const authContext = useContext(AuthContext)
   return (
     <div>
       <div className='px-2 py-2 items-center flex justify-between text-sm font-bold '>
@@ -56,7 +58,14 @@ export default function NavBar() {
             <i className="fa-solid fa-cart-shopping"></i>
           </div>
           <div className='border-2 border-primary-color h-8 p-2 flex justify-center items-center rounded-md text-primary-color cursor-pointer'>
-            <a className='' href="#">محمدرضا گودرزی</a>
+            {
+              authContext.isLogIn ? (
+                <Link className='' to="">{authContext.userInfos.name}</Link>
+                ) : (
+                  <Link className='' to="/login">ورود / ثبت نام</Link>
+                  
+              )
+            }
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@ import React, { useEffect, useReducer, useState } from 'react'
 import validator from '../../Validators/Validator';
 import { useForm } from '../../hooks/useForm';
 export default function Input(props) {
-    console.log(props.validations);
     const inputReducer = (state , action)=>{
         switch(action.type){
             case 'CHANGE': {
@@ -29,7 +28,6 @@ export default function Input(props) {
         onInputHandler(id , value,isValid)
     },[value])
     const onchangeHandler = (event)=>{
-        console.log(event.target.value);
         dispatch({
             type:'CHANGE',
             value:event.target.value,
