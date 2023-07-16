@@ -1,14 +1,60 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import TopBar from '../TopBar/TopBar'
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Counter from '../Counter/Counter'
 import Input from '../Form/Input'
 import Button from '../Form/Button'
 import { useForm } from '../../hooks/useForm'
+import AuthContext from '../../context/authContext'
+import swal from 'sweetalert'
+import ReCAPTCHA from "react-google-recaptcha";
 import { requiredValidator, minValidator, maxValidator, emailValidator } from '../../Validators/rules'
 export default function Login() {
+    const navigate = useNavigate()
+    const authContext = useContext(AuthContext)
+    const [isGoogleRecapchaVarify, setIsGoogleRecapchaVarify] = useState(false)
+    const userLogin = () => {
+        const userData = {
+            identifier: formState.inputs.username.value,
+            password: formState.inputs.password.value
+        }
+        fetch('http://localhost:4000/v1/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        }).then(ress => {
+            console.log(ress);
+            if (!ress.ok) {
+                return ress.text().then((text) => {
+                    throw new Error(text)
+                })
+            } else {
+                return ress.json()
+            }
+        })
+            .then((result) => {
+                swal({
+                    title: 'با موفقیت لاگین شدید',
+                    icon: 'success',
+                    button: 'ورود به پنل کاربری'
+                }).then(value => {
+                    navigate('/')
+                })
+                authContext.login({}, result.accessToken)
+            })
+            .catch(err => {
+                swal({
+                    title: 'همچین کابری وجود ندارد',
+                    icon: 'error',
+                    button: 'تلاش دوباره'
+                })
+                console.log('err=>', err)
+            })
+    }
     const [formState, onInputHandler] = useForm({
         username: {
             value: '',
@@ -20,6 +66,12 @@ export default function Login() {
         },
 
     }, false)
+
+    const onChangeHandler = () => {
+        console.log('login');
+        setIsGoogleRecapchaVarify(true)
+    }
+
     return (
         <div>
             <TopBar></TopBar>
@@ -48,7 +100,7 @@ export default function Login() {
                                     requiredValidator(),
                                     minValidator(8),
                                     maxValidator(30),
-                                    emailValidator()
+                                    // emailValidator()
                                 ]}
                                 onInputHandler={onInputHandler}
                             ></Input>
@@ -70,15 +122,22 @@ export default function Login() {
                             ></Input>
                             <i className="text-gray-400 fa-regular fa-star"></i>
                         </div>
-                        <div className={`flex ${formState.isFormValid ? 'bg-primary-color' : 'bg-red-800'} items-center  p-2`}>
+                        <div className=' flex justify-center'>
+                        <ReCAPTCHA
+                            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                            onChange={onChangeHandler}
+                            className=''
+                        />
+                        </div>
+                        <div className={`flex ${(formState.isFormValid && isGoogleRecapchaVarify) ? 'bg-primary-color' : 'bg-red-800'} items-center  p-2`}>
                             <div className=''>
                                 <i className="fa-regular fa-star"></i>
                             </div>
                             <div className='flex-1 text-center cursor-pointer'>
                                 <Button
-                                    onclick={''}
+                                    onClick={userLogin}
                                     className={``}
-                                    disabled={!formState.isFormValid}
+                                    disabled={(!formState.isFormValid || !isGoogleRecapchaVarify)}
                                 >ورود</Button>
                             </div>
                         </div>
